@@ -1,0 +1,27 @@
+#ifndef PLAYLIST_H
+#define PLAYLIST_H
+
+#include <string>
+using namespace std;
+
+
+class PlaylistNode{
+  public: 
+    void PlaylistNode();
+    void PlaylistNode(string, string, string, int);
+    void InsertAfter(PlaylistNode*);
+    void SetNext();
+    void GetID() const;
+    void GetSongName() const;
+    void GetArtistName()const;
+    void GetSongLength() const;
+    PlaylistNode* GetNext() const;
+    void PrintPlaylistNode() const;
+
+  private:
+    string uniqueID;
+    string songName;
+    string artistName;
+    int songLength;
+    PlaylistNode* nextNodePtr;
+};
